@@ -109,7 +109,7 @@ function handleSubmit() {
           🆕 Новий курс
         </span>
       </div>
-      <h1 class="mt-12 font-display text-5xl font-extrabold leading-[1.02] tracking-tight sm:mt-10 sm:text-7xl">
+      <h1 class="mt-12 font-display text-5xl font-extrabold leading-[1.15] tracking-tight sm:mt-10 sm:text-7xl">
         Просунуте <mark class="mark-accent-hero">інвестування</mark>
       </h1>
       <p class="mt-8 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
