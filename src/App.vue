@@ -104,12 +104,12 @@ function handleSubmit() {
     <section class="mx-auto max-w-6xl px-5 pb-24 pt-14 sm:px-8 sm:pt-24">
       <div class="flex items-center gap-3">
         <span
-          class="rise-in inline-flex rotate-[-3deg] rounded-lg bg-primary px-3 py-1.5 text-sm font-extrabold text-primary-foreground"
+          class="rise-in inline-flex rotate-[-3deg] rounded-lg bg-primary px-2.5 py-1 text-xs font-extrabold text-primary-foreground"
         >
           🆕 Новий курс
         </span>
       </div>
-      <h1 class="mt-8 font-display text-5xl font-extrabold leading-[1.02] tracking-tight sm:text-7xl">
+      <h1 class="mt-12 font-display text-5xl font-extrabold leading-[1.02] tracking-tight sm:mt-10 sm:text-7xl">
         Просунуте <mark class="mark-accent-hero">інвестування</mark>
       </h1>
       <p class="mt-8 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
