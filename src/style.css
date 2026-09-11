@@ -1,0 +1,126 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-surface: var(--surface);
+  --color-surface-foreground: var(--surface-foreground);
+  --color-paper: var(--paper);
+  --color-paper-foreground: var(--paper-foreground);
+  --color-paper-muted: var(--paper-muted);
+  --color-lime-soft: var(--lime-soft);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display-family);
+}
+
+:root {
+  --radius: 0.75rem;
+  --font-body: "Manrope", system-ui, sans-serif;
+  --font-display-family: "Manrope", system-ui, sans-serif;
+
+  /* dark editorial base, lime CTA, lavender highlight */
+  --background: oklch(0.185 0.004 106);
+  --foreground: oklch(0.98 0 0);
+  --surface: oklch(0.24 0.004 106);
+  --surface-foreground: oklch(0.98 0 0);
+  --card: oklch(0.24 0.004 106);
+  --card-foreground: oklch(0.98 0 0);
+  --popover: oklch(0.24 0.004 106);
+  --popover-foreground: oklch(0.98 0 0);
+  --primary: oklch(0.92 0.2 122);
+  --primary-foreground: oklch(0.2 0.02 120);
+  --secondary: oklch(0.3 0.004 106);
+  --secondary-foreground: oklch(0.98 0 0);
+  --muted: oklch(0.28 0.004 106);
+  --muted-foreground: oklch(0.72 0.005 106);
+  --accent: oklch(0.83 0.09 300);
+  --accent-foreground: oklch(0.2 0.02 300);
+  --destructive: oklch(0.6 0.22 27);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 18%);
+  --ring: oklch(0.92 0.2 122);
+  --paper: oklch(0.97 0.005 106);
+  --paper-foreground: oklch(0.2 0.02 106);
+  --paper-muted: oklch(0.45 0.02 106);
+  --lime-soft: oklch(0.78 0.18 122);
+}
+
+.dark {
+  --background: oklch(0.185 0.004 106);
+  --foreground: oklch(0.98 0 0);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@utility mark-accent {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+  padding: 0 0.18em 0.06em;
+  border-radius: 0.2rem;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+@utility mark-accent-hero {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+  padding: 0 0 0.06em;
+  border-radius: 0.2rem;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+@utility rise-in {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+}
+
+@keyframes rise {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
