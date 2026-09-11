@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import CtaButton from "./components/CtaButton.vue";
+import FooterLogo from "./components/FooterLogo.vue";
 
 const outcomes = [
   {
@@ -312,10 +313,28 @@ function handleSubmit() {
         </div>
         <CtaButton class-name="shrink-0" />
       </div>
-      <div class="mx-auto max-w-6xl border-t border-border px-5 py-6 sm:px-8">
-        <p class="text-xs text-muted-foreground">
-          школа останнього капіталіста · Просунуте інвестування · передзапис до 15.09
-        </p>
+      <div
+        class="mx-auto flex max-w-6xl flex-col items-start gap-8 border-t border-border px-5 py-10 sm:flex-row sm:items-center sm:justify-between sm:px-8"
+      >
+        <nav class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
+          <a
+            href="https://ostkap.school/privacy-policy"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="transition-colors hover:text-foreground"
+          >
+            Політика приватності
+          </a>
+          <a
+            href="https://ostkap.school/public-offer"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="transition-colors hover:text-foreground"
+          >
+            Публічна оферта
+          </a>
+        </nav>
+        <FooterLogo />
       </div>
     </footer>
   </div>
