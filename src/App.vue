@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import CtaButton from "./components/CtaButton.vue";
-import FooterLogo from "./components/FooterLogo.vue";
+import Logo from "./components/Logo.vue";
 
 const outcomes = [
   {
@@ -89,11 +89,8 @@ function handleSubmit() {
   <div class="min-h-screen bg-background font-sans text-foreground">
     <!-- Header -->
     <header class="mx-auto flex max-w-6xl items-center justify-between px-5 py-5 sm:px-8">
-      <a href="/" class="flex items-center gap-2.5">
-        <span class="text-2xl font-black leading-none text-accent select-none">V</span>
-        <span class="text-[0.8125rem] font-bold leading-[1.15] tracking-tight text-foreground">
-          школа<br />останнього капіталіста
-        </span>
+      <a href="/" class="flex items-center">
+        <Logo class="h-8 sm:h-9" />
       </a>
       <a
         href="#forma"
@@ -334,7 +331,7 @@ function handleSubmit() {
             Публічна оферта
           </a>
         </nav>
-        <FooterLogo />
+        <Logo class="h-14" />
       </div>
     </footer>
   </div>
